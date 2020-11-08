@@ -1,0 +1,103 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+
+  height: 100%;
+}
+.navbar h1{
+  color: #fff;
+}
+.h1-hp{
+  text-align: center;
+  font-size: 65px;
+  padding: 30px 0 20px 0;
+  text-transform: uppercase;
+}
+.navbar{
+  background-color: rgb(0, 132, 255);
+  height: 80px;
+
+}
+.num-cart{
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar span{
+  color: rgb(0, 132, 255) ;
+  font-size: 25px;
+}
+.total-num,
+.clear-btn{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 45px;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  
+}
+.total-num{
+  border: 1px solid  rgb(0, 132, 255);
+  background-color: rgb(0, 132, 255);
+}
+.clear-btn{
+  border: 1px solid   rgb(245, 32, 32);
+  background-color: rgb(245, 32, 32);
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.empty-text{
+  text-align: center;
+  font-size: 26px;
+  color: rgb(134, 121, 121);
+}
+.shop{
+  margin-bottom: 40px;
+}
+.left-container p:first-child{
+  font-size: 25px;
+  color: #000;
+
+}
+.left-container p:last-of-type{
+  font-size: 18px;
+  color: rgb(105, 103, 103);
+}
+.left-container button{
+  border: 1px solid   rgb(245, 32, 32);
+  background-color: rgb(245, 32, 32);
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  
+}
+.right-container span{
+  background-color: rgb(134, 121, 121);
+  border-radius: 50%;
+  color: #fff;
+  width: 20px;
+  height: 20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-container p{
+  text-align: center;
+}
+
+@media(max-width:840px){
+  .container{
+    padding: 0 30px;
+  }
+}
