@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import Shop from './Shoping-list';
+import Item from './ItemAdd'
 
 
 class App extends Component{
@@ -37,11 +38,11 @@ class App extends Component{
 
   remove=(i)=>{
     const lista = [...this.state.list];
-    lista[i].stock=0;
+    
     lista.splice(i,1);
   
-    this.setState({list: lista})
-    this.total()
+    this.setState({list: lista},this.total)
+
   }
 
 
@@ -76,6 +77,11 @@ class App extends Component{
       this.setState({total: 0})
 
   }
+  addItems=(e)=>{
+    const lista=[...this.state.list];
+    lista.push(e);
+    this.setState({list:lista},this.total)
+  }
   render(){
     let total=0;
     this.state.list.map((e)=>{
@@ -99,6 +105,7 @@ class App extends Component{
          add={()=> this.add(i)}
          subtract={()=>this.subtract(i)}  />
       ))} 
+      <Item adding={this.addItems} />
      <hr/>
      
        {!this.state.empty?
